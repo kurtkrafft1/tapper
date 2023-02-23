@@ -5,6 +5,7 @@ import Tapper from "./pages/Tapper";
 import Login from "./pages/Login";
 import { AuthProvider } from "./hooks/useAuth";
 import TopBar from "./components/TopBar.js";
+import HighScores from "./pages/HighScores";
 
 function App() {
   return (
@@ -17,6 +18,14 @@ function App() {
             element={
               <AuthenticatedRoute>
                 <Tapper />
+              </AuthenticatedRoute>
+            }
+          />
+          <Route
+            path="/highscores"
+            element={
+              <AuthenticatedRoute>
+                <HighScores />
               </AuthenticatedRoute>
             }
           />
